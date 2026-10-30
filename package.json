@@ -1,0 +1,14 @@
+{
+  "name": "ai-art-reference-lib",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "galleries:offline": "node scripts/serve-offline-galleries.mjs",
+    "galleries:validate": "node scripts/validate-offline-galleries.mjs",
+    "scrape:depth": "node scripts/scrape-pose-depth-gallery.mjs",
+    "galleries:regen": "node scripts/regen-gallery-comfy.mjs",
+    "galleries:regen-mix-male": "node scripts/regen-mix-missing-male.mjs",
+    "galleries:pages:prepare": "node scripts/prepare-pages.mjs",
+    "galleries:sync:b2": "node scripts/sync-b2.mjs"
+  }
+}

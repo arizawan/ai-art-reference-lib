@@ -1,0 +1,59 @@
+{
+  "splitAt": "2026-10-30",
+  "fromRepo": "fairpose",
+  "fromBranch": "chore/fairpose-com-cutover-prep",
+  "fromCommitDepth": "eaa4c2ba",
+  "pushStatus": "never landed on origin \u2014 pack exceeded GitHub 2 GiB limit (~7 GB unpushed galleries)",
+  "galleries": {
+    "portrait": {
+      "source": "https://ai-portrait-gallery.pages.dev/",
+      "total": 1499,
+      "scrapedAt": "2026-10-30T03:02:35.213Z"
+    },
+    "pose": {
+      "source": "https://ai-pose-gallery.pages.dev/",
+      "total": 1439,
+      "scrapedAt": "2026-10-29T09:56:37.570Z"
+    },
+    "costume": {
+      "source": "https://ai-costume-gallery.pages.dev/",
+      "total": 1407,
+      "scrapedAt": "2026-10-29T09:55:31.858Z"
+    },
+    "depth": {
+      "source": "https://ai-pose-depth-gallery.pages.dev/",
+      "total": 1439,
+      "scrapedAt": "2026-10-30T08:51:28.382Z"
+    }
+  },
+  "regen": {
+    "comfyUrlDefault": "http://100.96.51.107:8188",
+    "workflow": "Qwen21-EDIT-REF",
+    "presets": {
+      "quick": "8 steps, maxSide 832 default for pose",
+      "best": "12 steps, costume/portrait default"
+    },
+    "stateJobs": {
+      "done": 219
+    },
+    "stateJobCount": 219,
+    "mixMale": {
+      "done": 48
+    },
+    "mixMaleCount": 48,
+    "outCounts": {
+      "portrait": 4,
+      "samples": 219,
+      "costume": 2,
+      "pose": 213,
+      "mix-male": 48
+    },
+    "woodBatchNote": "Pose wood batch stopped ~211 done after quality judged junk; depth gallery pulled instead.",
+    "clayDropped": true
+  },
+  "fairposeStillHas": [
+    "public/mix/img (full Mix library; expression males may have been written then moved)",
+    "public/styles/expression_* (some expression plates)",
+    "uncommitted deletion of gallery trees on chore/fairpose-com-cutover-prep (~12989 paths)"
+  ]
+}

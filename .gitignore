@@ -1,0 +1,18 @@
+.DS_Store
+node_modules/
+*.log
+!logs/*.log
+.specs/scratchpad/
+data/galleries/config.json
+
+# Large gallery binaries stay on B2 — keep cues/meta in git
+data/portrait-gallery/img/
+data/pose-gallery/img/
+data/pose-gallery/thumbs/
+data/costume-gallery/img/
+data/costume-gallery/thumbs/
+data/costume-gallery/png/
+data/pose-depth-gallery/img/
+data/pose-depth-gallery/thumbs/
+data/gallery-regen/out/
+data/gallery-regen/refs/

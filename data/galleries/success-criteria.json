@@ -1,0 +1,74 @@
+{
+  "version": 1,
+  "persona": {
+    "name": "Ref picker",
+    "goal": "Pick face, pose, and outfit references offline for AI generation without hopping three sites.",
+    "pain": "Split UIs, credits in the hero, inconsistent filters, no proof the full image set is intact."
+  },
+  "baseline": {
+    "capturedAt": "2026-10-30",
+    "apps": ["portrait", "costume", "pose", "depth"],
+    "issues": [
+      "Three separate pages instead of one workflow",
+      "Creator / open-chat CTAs in hero and mid-page on costume and pose",
+      "Portrait has no credit footer; costume/pose duplicate credit blocks",
+      "No automated check that every cue maps to on-disk full-size files"
+    ],
+    "usabilityTasks": [
+      {
+        "id": "T1",
+        "scenario": "Need a short-hair face ref for a character sheet.",
+        "goal": "Open Portrait, filter Face + Short, open one card, download full size.",
+        "success": "Modal download href points under /portrait/ and file exists."
+      },
+      {
+        "id": "T2",
+        "scenario": "Need a standing pose from the sexy full-body line.",
+        "goal": "Switch to Pose, filter Full · sexy + Front, open a pose group.",
+        "success": "Angle strip and modal download under /pose/ work without leaving the page."
+      },
+      {
+        "id": "T3",
+        "scenario": "Need a spring outfit ref.",
+        "goal": "Switch to Costume, filter Spring, open one card, download.",
+        "success": "Category filter reduces grid; download under /costume/."
+      }
+    ]
+  },
+  "expectedCounts": {
+    "portrait": 1499,
+    "costume": 1407,
+    "pose": 1439,
+    "depth": 1439
+  },
+  "criteria": [
+    {
+      "id": "SC-1",
+      "text": "One page at / browses all three libraries without leaving the app"
+    },
+    {
+      "id": "SC-2",
+      "text": "Footer keeps license copy; header credits Gia via X (@giaaibusi), not GitHub"
+    },
+    {
+      "id": "SC-3",
+      "text": "Cue counts match expectedCounts for portrait, costume, and pose"
+    },
+    {
+      "id": "SC-4",
+      "text": "Every cue has on-disk thumb and original (costume also preview); zero missing files"
+    },
+    {
+      "id": "SC-5",
+      "text": "No MixCue part field on any gallery cue"
+    },
+    {
+      "id": "SC-6",
+      "text": "Library-specific filters render for the active library"
+    },
+    {
+      "id": "SC-7",
+      "text": "Modal can open a cue and expose a full-size download href under the active library mount"
+    }
+  ]
+}

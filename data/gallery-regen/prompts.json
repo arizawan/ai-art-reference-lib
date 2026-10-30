@@ -1,0 +1,14 @@
+{
+  "pose": {
+    "female": "POSE LOCK: copy only the body pose, limb angles, weight shift, and camera viewpoint from <image1>. Ignore the pose of <image2>. Redraw as a full-body 3D articulated female wooden mannequin matching only the material, joint style, and proportions of <image2>. Natural polished wood grain, visible mechanical ball joints, smooth featureless head, feminine silhouette. Clean solid pure white studio background. Soft studio lighting. Do not copy <image1>'s line-drawing look. Photorealistic 3D render, vertical, ultra-detailed, zero text.",
+    "male": "POSE LOCK: copy only the body pose, limb angles, weight shift, and camera viewpoint from <image1>. Ignore the pose of <image2>. Redraw as a full-body 3D articulated male wooden mannequin matching only the material, joint style, and proportions of <image2>. Natural polished wood grain, broad masculine shoulders, defined chest, visible mechanical ball joints, smooth featureless head. Clean solid pure white studio background. Soft studio lighting. Do not copy <image1>'s line-drawing look. Photorealistic 3D render, vertical, ultra-detailed, zero text."
+  },
+  "costume": {
+    "default": "Ultra-sharp commercial fashion catalog photo, vertical full body, one adult female only. Edit <image1>: keep this mannequin's body, hourglass proportions (full bust, dramatically cinched waist, wide hips), matte white skin, minimal face, and long wavy dark brown wig. Fully replace its white strapless bodysuit with the COMPLETE outfit from <image2> — every garment, color, layer, shoe, bag, hat, jewelry, accessory. Fit clothes tightly so the narrow waist stays visible. Do not copy <image2>'s body shape. Light grey cyclorama, soft studio light, optional window-blind shadows. Crisp fabric weave, sharp edges, no mushy blur, zero text."
+  },
+  "portrait": {
+    "female": "Photoreal chest-up studio portrait. IDENTITY LOCK on <image2> (Mika Vay): same face structure, eyes, nose, lips, skin, age — she must be recognizably the same person. Apply only the hair CUT / silhouette / length / parting from <image1>; keep Mika's dusty muted pink hair color unless <image1> clearly forces another color. Match head angle and framing feel from <image1>. Seamless light grey backdrop, soft even studio light, sharp pores, zero text, no watermark.",
+    "male": "Photoreal chest-up studio portrait. IDENTITY LOCK on <image2> (Ren Okada): same face structure, eyes, nose, lips, skin, age — he must be recognizably the same person. Apply only the hair CUT / silhouette / length / parting from <image1>; keep his short textured black hair color unless <image1> clearly forces another color. Match head angle and framing feel from <image1>. Seamless light grey backdrop, soft even studio light, sharp pores, zero text, no watermark."
+  }
+}
+

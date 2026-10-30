@@ -1,0 +1,407 @@
+{
+  "version": 1,
+  "jobs": {
+    "expression_allure-bedroom-eyes_male": {
+      "status": "done",
+      "male": "public/mix/img/expression_allure-bedroom-eyes_male.webp",
+      "seconds": 57,
+      "updatedAt": "2026-10-30T05:55:02.804Z",
+      "note": "webp fixed after smoke"
+    },
+    "expression_allure-half-lidded-smile_male": {
+      "status": "done",
+      "male": "/Users/riz/Work/TheaTechSolutions/fairpose/public/mix/img/expression_allure-half-lidded-smile_male.webp",
+      "outPng": "/Users/riz/Work/TheaTechSolutions/fairpose/data/gallery-regen/out/mix-male/expression_allure-half-lidded-smile_male.png",
+      "seconds": 37,
+      "updatedAt": "2026-10-30T05:55:46.693Z",
+      "bytes": 851628
+    },
+    "expression_allure-slow-smirk_male": {
+      "status": "done",
+      "male": "/Users/riz/Work/TheaTechSolutions/fairpose/public/mix/img/expression_allure-slow-smirk_male.webp",
+      "outPng": "/Users/riz/Work/TheaTechSolutions/fairpose/data/gallery-regen/out/mix-male/expression_allure-slow-smirk_male.png",
+      "seconds": 38,
+      "updatedAt": "2026-10-30T05:56:24.920Z",
+      "bytes": 855146
+    },
+    "expression_ax-ap-blink-scream-teeth_male": {
+      "status": "done",
+      "male": "/Users/riz/Work/TheaTechSolutions/fairpose/public/mix/img/expression_ax-ap-blink-scream-teeth_male.webp",
+      "outPng": "/Users/riz/Work/TheaTechSolutions/fairpose/data/gallery-regen/out/mix-male/expression_ax-ap-blink-scream-teeth_male.png",
+      "seconds": 53,
+      "updatedAt": "2026-10-30T06:16:08.061Z",
+      "bytes": 856673,
+      "prompt": "v2-expr-lock"
+    },
+    "expression_ax-ap-puckered-lips-playful_male": {
+      "status": "done",
+      "male": "/Users/riz/Work/TheaTechSolutions/fairpose/public/mix/img/expression_ax-ap-puckered-lips-playful_male.webp",
+      "outPng": "/Users/riz/Work/TheaTechSolutions/fairpose/data/gallery-regen/out/mix-male/expression_ax-ap-puckered-lips-playful_male.png",
+      "seconds": 50,
+      "updatedAt": "2026-10-30T06:16:58.105Z",
+      "bytes": 852197,
+      "prompt": "v2-expr-lock"
+    },
+    "expression_ax-expression-allure-over-shoulder_male": {
+      "status": "done",
+      "male": "/Users/riz/Work/TheaTechSolutions/fairpose/public/mix/img/expression_ax-expression-allure-over-shoulder_male.webp",
+      "outPng": "/Users/riz/Work/TheaTechSolutions/fairpose/data/gallery-regen/out/mix-male/expression_ax-expression-allure-over-shoulder_male.png",
+      "seconds": 38,
+      "updatedAt": "2026-10-30T05:58:22.940Z",
+      "bytes": 819483
+    },
+    "expression_ax-expression-allure-parted-breath_male": {
+      "status": "done",
+      "male": "/Users/riz/Work/TheaTechSolutions/fairpose/public/mix/img/expression_ax-expression-allure-parted-breath_male.webp",
+      "outPng": "/Users/riz/Work/TheaTechSolutions/fairpose/data/gallery-regen/out/mix-male/expression_ax-expression-allure-parted-breath_male.png",
+      "seconds": 36,
+      "updatedAt": "2026-10-30T05:58:59.179Z",
+      "bytes": 814654
+    },
+    "expression_ax-expression-allure-slow-smirk_male": {
+      "status": "done",
+      "male": "/Users/riz/Work/TheaTechSolutions/fairpose/public/mix/img/expression_ax-expression-allure-slow-smirk_male.webp",
+      "outPng": "/Users/riz/Work/TheaTechSolutions/fairpose/data/gallery-regen/out/mix-male/expression_ax-expression-allure-slow-smirk_male.png",
+      "seconds": 36,
+      "updatedAt": "2026-10-30T05:59:35.121Z",
+      "bytes": 832699
+    },
+    "expression_ax-expression-allure-smoulder_male": {
+      "status": "done",
+      "male": "/Users/riz/Work/TheaTechSolutions/fairpose/public/mix/img/expression_ax-expression-allure-smoulder_male.webp",
+      "outPng": "/Users/riz/Work/TheaTechSolutions/fairpose/data/gallery-regen/out/mix-male/expression_ax-expression-allure-smoulder_male.png",
+      "seconds": 37,
+      "updatedAt": "2026-10-30T06:00:11.916Z",
+      "bytes": 824990
+    },
+    "expression_ax-expression-ap-looking-up-teary_male": {
+      "status": "done",
+      "male": "/Users/riz/Work/TheaTechSolutions/fairpose/public/mix/img/expression_ax-expression-ap-looking-up-teary_male.webp",
+      "outPng": "/Users/riz/Work/TheaTechSolutions/fairpose/data/gallery-regen/out/mix-male/expression_ax-expression-ap-looking-up-teary_male.png",
+      "seconds": 36,
+      "updatedAt": "2026-10-30T06:00:48.202Z",
+      "bytes": 815869
+    },
+    "expression_ax-expression-black-tears_male": {
+      "status": "done",
+      "male": "/Users/riz/Work/TheaTechSolutions/fairpose/public/mix/img/expression_ax-expression-black-tears_male.webp",
+      "outPng": "/Users/riz/Work/TheaTechSolutions/fairpose/data/gallery-regen/out/mix-male/expression_ax-expression-black-tears_male.png",
+      "seconds": 42,
+      "updatedAt": "2026-10-30T06:01:29.906Z",
+      "bytes": 832608
+    },
+    "expression_ax-expression-cd-peaceful-melancholy_male": {
+      "status": "done",
+      "male": "/Users/riz/Work/TheaTechSolutions/fairpose/public/mix/img/expression_ax-expression-cd-peaceful-melancholy_male.webp",
+      "outPng": "/Users/riz/Work/TheaTechSolutions/fairpose/data/gallery-regen/out/mix-male/expression_ax-expression-cd-peaceful-melancholy_male.png",
+      "seconds": 36,
+      "updatedAt": "2026-10-30T06:02:05.557Z",
+      "bytes": 824491
+    },
+    "expression_ax-expression-cd-tired-but-cheerful_male": {
+      "status": "done",
+      "male": "/Users/riz/Work/TheaTechSolutions/fairpose/public/mix/img/expression_ax-expression-cd-tired-but-cheerful_male.webp",
+      "outPng": "/Users/riz/Work/TheaTechSolutions/fairpose/data/gallery-regen/out/mix-male/expression_ax-expression-cd-tired-but-cheerful_male.png",
+      "seconds": 36,
+      "updatedAt": "2026-10-30T06:02:41.724Z",
+      "bytes": 831108
+    },
+    "expression_ax-expression-cd-unmotivated-languid_male": {
+      "status": "done",
+      "male": "/Users/riz/Work/TheaTechSolutions/fairpose/public/mix/img/expression_ax-expression-cd-unmotivated-languid_male.webp",
+      "outPng": "/Users/riz/Work/TheaTechSolutions/fairpose/data/gallery-regen/out/mix-male/expression_ax-expression-cd-unmotivated-languid_male.png",
+      "seconds": 36,
+      "updatedAt": "2026-10-30T06:03:17.375Z",
+      "bytes": 827489
+    },
+    "expression_ax-expression-cloudy-eyes_male": {
+      "status": "done",
+      "male": "/Users/riz/Work/TheaTechSolutions/fairpose/public/mix/img/expression_ax-expression-cloudy-eyes_male.webp",
+      "outPng": "/Users/riz/Work/TheaTechSolutions/fairpose/data/gallery-regen/out/mix-male/expression_ax-expression-cloudy-eyes_male.png",
+      "seconds": 36,
+      "updatedAt": "2026-10-30T06:03:53.099Z",
+      "bytes": 812792
+    },
+    "expression_ax-expression-crying-heavily_male": {
+      "status": "done",
+      "male": "/Users/riz/Work/TheaTechSolutions/fairpose/public/mix/img/expression_ax-expression-crying-heavily_male.webp",
+      "outPng": "/Users/riz/Work/TheaTechSolutions/fairpose/data/gallery-regen/out/mix-male/expression_ax-expression-crying-heavily_male.png",
+      "seconds": 37,
+      "updatedAt": "2026-10-30T06:17:35.356Z",
+      "bytes": 870145,
+      "prompt": "v2-expr-lock"
+    },
+    "expression_ax-expression-determined-focus_male": {
+      "status": "done",
+      "male": "/Users/riz/Work/TheaTechSolutions/fairpose/public/mix/img/expression_ax-expression-determined-focus_male.webp",
+      "outPng": "/Users/riz/Work/TheaTechSolutions/fairpose/data/gallery-regen/out/mix-male/expression_ax-expression-determined-focus_male.png",
+      "seconds": 36,
+      "updatedAt": "2026-10-30T06:05:04.919Z",
+      "bytes": 824247
+    },
+    "expression_ax-expression-droopy-eyes_male": {
+      "status": "done",
+      "male": "/Users/riz/Work/TheaTechSolutions/fairpose/public/mix/img/expression_ax-expression-droopy-eyes_male.webp",
+      "outPng": "/Users/riz/Work/TheaTechSolutions/fairpose/data/gallery-regen/out/mix-male/expression_ax-expression-droopy-eyes_male.png",
+      "seconds": 36,
+      "updatedAt": "2026-10-30T06:05:41.142Z",
+      "bytes": 812233
+    },
+    "expression_ax-expression-gpt2ds-eyes-closed-savoring_male": {
+      "status": "done",
+      "male": "/Users/riz/Work/TheaTechSolutions/fairpose/public/mix/img/expression_ax-expression-gpt2ds-eyes-closed-savoring_male.webp",
+      "outPng": "/Users/riz/Work/TheaTechSolutions/fairpose/data/gallery-regen/out/mix-male/expression_ax-expression-gpt2ds-eyes-closed-savoring_male.png",
+      "seconds": 36,
+      "updatedAt": "2026-10-30T06:06:17.406Z",
+      "bytes": 833677
+    },
+    "expression_ax-expression-gpt2ds-queue-impatience_male": {
+      "status": "done",
+      "male": "/Users/riz/Work/TheaTechSolutions/fairpose/public/mix/img/expression_ax-expression-gpt2ds-queue-impatience_male.webp",
+      "outPng": "/Users/riz/Work/TheaTechSolutions/fairpose/data/gallery-regen/out/mix-male/expression_ax-expression-gpt2ds-queue-impatience_male.png",
+      "seconds": 38,
+      "updatedAt": "2026-10-30T06:06:55.182Z",
+      "bytes": 816324
+    },
+    "expression_ax-expression-mouth-corner-lacerations_male": {
+      "status": "done",
+      "male": "/Users/riz/Work/TheaTechSolutions/fairpose/public/mix/img/expression_ax-expression-mouth-corner-lacerations_male.webp",
+      "outPng": "/Users/riz/Work/TheaTechSolutions/fairpose/data/gallery-regen/out/mix-male/expression_ax-expression-mouth-corner-lacerations_male.png",
+      "seconds": 36,
+      "updatedAt": "2026-10-30T06:07:31.364Z",
+      "bytes": 826766
+    },
+    "expression_ax-expression-ph-dreamy-soft-smile_male": {
+      "status": "done",
+      "male": "/Users/riz/Work/TheaTechSolutions/fairpose/public/mix/img/expression_ax-expression-ph-dreamy-soft-smile_male.webp",
+      "outPng": "/Users/riz/Work/TheaTechSolutions/fairpose/data/gallery-regen/out/mix-male/expression_ax-expression-ph-dreamy-soft-smile_male.png",
+      "seconds": 36,
+      "updatedAt": "2026-10-30T06:08:07.538Z",
+      "bytes": 822009
+    },
+    "expression_ax-expression-ph-neutral-composed_male": {
+      "status": "done",
+      "male": "/Users/riz/Work/TheaTechSolutions/fairpose/public/mix/img/expression_ax-expression-ph-neutral-composed_male.webp",
+      "outPng": "/Users/riz/Work/TheaTechSolutions/fairpose/data/gallery-regen/out/mix-male/expression_ax-expression-ph-neutral-composed_male.png",
+      "seconds": 37,
+      "updatedAt": "2026-10-30T06:08:44.603Z",
+      "bytes": 823465
+    },
+    "expression_ax-expression-ph-pleasant-smile-closed_male": {
+      "status": "done",
+      "male": "/Users/riz/Work/TheaTechSolutions/fairpose/public/mix/img/expression_ax-expression-ph-pleasant-smile-closed_male.webp",
+      "outPng": "/Users/riz/Work/TheaTechSolutions/fairpose/data/gallery-regen/out/mix-male/expression_ax-expression-ph-pleasant-smile-closed_male.png",
+      "seconds": 36,
+      "updatedAt": "2026-10-30T06:09:20.297Z",
+      "bytes": 828852
+    },
+    "expression_ax-expression-sanpaku-upward-gaze_male": {
+      "status": "done",
+      "male": "/Users/riz/Work/TheaTechSolutions/fairpose/public/mix/img/expression_ax-expression-sanpaku-upward-gaze_male.webp",
+      "outPng": "/Users/riz/Work/TheaTechSolutions/fairpose/data/gallery-regen/out/mix-male/expression_ax-expression-sanpaku-upward-gaze_male.png",
+      "seconds": 35,
+      "updatedAt": "2026-10-30T06:09:55.384Z",
+      "bytes": 833290
+    },
+    "expression_ax-expression-shock-jaw-drop_male": {
+      "status": "done",
+      "male": "/Users/riz/Work/TheaTechSolutions/fairpose/public/mix/img/expression_ax-expression-shock-jaw-drop_male.webp",
+      "outPng": "/Users/riz/Work/TheaTechSolutions/fairpose/data/gallery-regen/out/mix-male/expression_ax-expression-shock-jaw-drop_male.png",
+      "seconds": 36,
+      "updatedAt": "2026-10-30T06:10:31.012Z",
+      "bytes": 818234
+    },
+    "expression_ax-expression-showing-teeth_male": {
+      "status": "done",
+      "male": "/Users/riz/Work/TheaTechSolutions/fairpose/public/mix/img/expression_ax-expression-showing-teeth_male.webp",
+      "outPng": "/Users/riz/Work/TheaTechSolutions/fairpose/data/gallery-regen/out/mix-male/expression_ax-expression-showing-teeth_male.png",
+      "seconds": 38,
+      "updatedAt": "2026-10-30T06:11:09.437Z",
+      "bytes": 839811
+    },
+    "expression_ax-expression-single-tear_male": {
+      "status": "done",
+      "male": "/Users/riz/Work/TheaTechSolutions/fairpose/public/mix/img/expression_ax-expression-single-tear_male.webp",
+      "outPng": "/Users/riz/Work/TheaTechSolutions/fairpose/data/gallery-regen/out/mix-male/expression_ax-expression-single-tear_male.png",
+      "seconds": 35,
+      "updatedAt": "2026-10-30T06:11:44.600Z",
+      "bytes": 825225
+    },
+    "expression_ax-expression-sleep-peaceful_male": {
+      "status": "done",
+      "male": "/Users/riz/Work/TheaTechSolutions/fairpose/public/mix/img/expression_ax-expression-sleep-peaceful_male.webp",
+      "outPng": "/Users/riz/Work/TheaTechSolutions/fairpose/data/gallery-regen/out/mix-male/expression_ax-expression-sleep-peaceful_male.png",
+      "seconds": 36,
+      "updatedAt": "2026-10-30T06:12:20.178Z",
+      "bytes": 826294
+    },
+    "expression_ax-expression-teary-eyes_male": {
+      "status": "done",
+      "male": "/Users/riz/Work/TheaTechSolutions/fairpose/public/mix/img/expression_ax-expression-teary-eyes_male.webp",
+      "outPng": "/Users/riz/Work/TheaTechSolutions/fairpose/data/gallery-regen/out/mix-male/expression_ax-expression-teary-eyes_male.png",
+      "seconds": 37,
+      "updatedAt": "2026-10-30T06:12:56.725Z",
+      "bytes": 826712
+    },
+    "expression_ax-expression-vampire-fangs_male": {
+      "status": "done",
+      "male": "/Users/riz/Work/TheaTechSolutions/fairpose/public/mix/img/expression_ax-expression-vampire-fangs_male.webp",
+      "outPng": "/Users/riz/Work/TheaTechSolutions/fairpose/data/gallery-regen/out/mix-male/expression_ax-expression-vampire-fangs_male.png",
+      "seconds": 36,
+      "updatedAt": "2026-10-30T06:13:32.543Z",
+      "bytes": 817095
+    },
+    "expression_ax-expression-vid-hollow-disbelief_male": {
+      "status": "done",
+      "male": "/Users/riz/Work/TheaTechSolutions/fairpose/public/mix/img/expression_ax-expression-vid-hollow-disbelief_male.webp",
+      "outPng": "/Users/riz/Work/TheaTechSolutions/fairpose/data/gallery-regen/out/mix-male/expression_ax-expression-vid-hollow-disbelief_male.png",
+      "seconds": 35,
+      "updatedAt": "2026-10-30T06:14:08.028Z",
+      "bytes": 818788
+    },
+    "expression_ax-expression-vid-mid-bite-delight_male": {
+      "status": "done",
+      "male": "/Users/riz/Work/TheaTechSolutions/fairpose/public/mix/img/expression_ax-expression-vid-mid-bite-delight_male.webp",
+      "outPng": "/Users/riz/Work/TheaTechSolutions/fairpose/data/gallery-regen/out/mix-male/expression_ax-expression-vid-mid-bite-delight_male.png",
+      "seconds": 41,
+      "updatedAt": "2026-10-30T06:18:41.281Z",
+      "bytes": 861934,
+      "prompt": "v2-expr-lock"
+    },
+    "expression_ax-expression-vid-pre-action-pressure_male": {
+      "status": "done",
+      "male": "/Users/riz/Work/TheaTechSolutions/fairpose/public/mix/img/expression_ax-expression-vid-pre-action-pressure_male.webp",
+      "outPng": "/Users/riz/Work/TheaTechSolutions/fairpose/data/gallery-regen/out/mix-male/expression_ax-expression-vid-pre-action-pressure_male.png",
+      "seconds": 37,
+      "updatedAt": "2026-10-30T06:19:18.552Z",
+      "bytes": 844379,
+      "prompt": "v2-expr-lock"
+    },
+    "expression_ax-expression-vid-tired-neutral-composed_male": {
+      "status": "done",
+      "male": "/Users/riz/Work/TheaTechSolutions/fairpose/public/mix/img/expression_ax-expression-vid-tired-neutral-composed_male.webp",
+      "outPng": "/Users/riz/Work/TheaTechSolutions/fairpose/data/gallery-regen/out/mix-male/expression_ax-expression-vid-tired-neutral-composed_male.png",
+      "seconds": 37,
+      "updatedAt": "2026-10-30T06:19:55.799Z",
+      "bytes": 869649,
+      "prompt": "v2-expr-lock"
+    },
+    "expression_ax-rd-soft-enigmatic-parted_male": {
+      "status": "done",
+      "male": "/Users/riz/Work/TheaTechSolutions/fairpose/public/mix/img/expression_ax-rd-soft-enigmatic-parted_male.webp",
+      "outPng": "/Users/riz/Work/TheaTechSolutions/fairpose/data/gallery-regen/out/mix-male/expression_ax-rd-soft-enigmatic-parted_male.png",
+      "seconds": 37,
+      "updatedAt": "2026-10-30T06:20:32.436Z",
+      "bytes": 869069,
+      "prompt": "v2-expr-lock"
+    },
+    "expression_coy-glance_004_male": {
+      "status": "done",
+      "male": "/Users/riz/Work/TheaTechSolutions/fairpose/public/mix/img/expression_coy-glance_004_male.webp",
+      "outPng": "/Users/riz/Work/TheaTechSolutions/fairpose/data/gallery-regen/out/mix-male/expression_coy-glance_004_male.png",
+      "seconds": 39,
+      "updatedAt": "2026-10-30T06:21:11.307Z",
+      "bytes": 869820,
+      "prompt": "v2-expr-lock"
+    },
+    "expression_ea-aegyo-eye-smile_male": {
+      "status": "done",
+      "male": "/Users/riz/Work/TheaTechSolutions/fairpose/public/mix/img/expression_ea-aegyo-eye-smile_male.webp",
+      "outPng": "/Users/riz/Work/TheaTechSolutions/fairpose/data/gallery-regen/out/mix-male/expression_ea-aegyo-eye-smile_male.png",
+      "seconds": 38,
+      "updatedAt": "2026-10-30T06:21:49.057Z",
+      "bytes": 868536,
+      "prompt": "v2-expr-lock"
+    },
+    "expression_ea-big-eyed-innocent_male": {
+      "status": "done",
+      "male": "/Users/riz/Work/TheaTechSolutions/fairpose/public/mix/img/expression_ea-big-eyed-innocent_male.webp",
+      "outPng": "/Users/riz/Work/TheaTechSolutions/fairpose/data/gallery-regen/out/mix-male/expression_ea-big-eyed-innocent_male.png",
+      "seconds": 38,
+      "updatedAt": "2026-10-30T06:22:27.418Z",
+      "bytes": 883221,
+      "prompt": "v2-expr-lock"
+    },
+    "expression_ea-blow-kiss_male": {
+      "status": "done",
+      "male": "/Users/riz/Work/TheaTechSolutions/fairpose/public/mix/img/expression_ea-blow-kiss_male.webp",
+      "outPng": "/Users/riz/Work/TheaTechSolutions/fairpose/data/gallery-regen/out/mix-male/expression_ea-blow-kiss_male.png",
+      "seconds": 44,
+      "updatedAt": "2026-10-30T06:23:11.360Z",
+      "bytes": 854186,
+      "prompt": "v2-expr-lock"
+    },
+    "expression_ea-cheek-puff_male": {
+      "status": "done",
+      "male": "/Users/riz/Work/TheaTechSolutions/fairpose/public/mix/img/expression_ea-cheek-puff_male.webp",
+      "outPng": "/Users/riz/Work/TheaTechSolutions/fairpose/data/gallery-regen/out/mix-male/expression_ea-cheek-puff_male.png",
+      "seconds": 39,
+      "updatedAt": "2026-10-30T06:23:50.643Z",
+      "bytes": 867550,
+      "prompt": "v2-expr-lock"
+    },
+    "expression_ea2-baby-pout_male": {
+      "status": "done",
+      "male": "/Users/riz/Work/TheaTechSolutions/fairpose/public/mix/img/expression_ea2-baby-pout_male.webp",
+      "outPng": "/Users/riz/Work/TheaTechSolutions/fairpose/data/gallery-regen/out/mix-male/expression_ea2-baby-pout_male.png",
+      "seconds": 38,
+      "updatedAt": "2026-10-30T06:24:28.476Z",
+      "bytes": 870338,
+      "prompt": "v2-expr-lock"
+    },
+    "expression_ea2-doe-lip-bite_male": {
+      "status": "done",
+      "male": "/Users/riz/Work/TheaTechSolutions/fairpose/public/mix/img/expression_ea2-doe-lip-bite_male.webp",
+      "outPng": "/Users/riz/Work/TheaTechSolutions/fairpose/data/gallery-regen/out/mix-male/expression_ea2-doe-lip-bite_male.png",
+      "seconds": 39,
+      "updatedAt": "2026-10-30T06:25:07.745Z",
+      "bytes": 870664,
+      "prompt": "v2-expr-lock"
+    },
+    "expression_ea2-heart-eyes_male": {
+      "status": "done",
+      "male": "/Users/riz/Work/TheaTechSolutions/fairpose/public/mix/img/expression_ea2-heart-eyes_male.webp",
+      "outPng": "/Users/riz/Work/TheaTechSolutions/fairpose/data/gallery-regen/out/mix-male/expression_ea2-heart-eyes_male.png",
+      "seconds": 37,
+      "updatedAt": "2026-10-30T06:25:44.793Z",
+      "bytes": 873047,
+      "prompt": "v2-expr-lock"
+    },
+    "expression_ea2-hime-elegant_male": {
+      "status": "done",
+      "male": "/Users/riz/Work/TheaTechSolutions/fairpose/public/mix/img/expression_ea2-hime-elegant_male.webp",
+      "outPng": "/Users/riz/Work/TheaTechSolutions/fairpose/data/gallery-regen/out/mix-male/expression_ea2-hime-elegant_male.png",
+      "seconds": 38,
+      "updatedAt": "2026-10-30T06:26:22.728Z",
+      "bytes": 850589,
+      "prompt": "v2-expr-lock"
+    },
+    "expression_ea2-surprised-gasp_male": {
+      "status": "done",
+      "male": "/Users/riz/Work/TheaTechSolutions/fairpose/public/mix/img/expression_ea2-surprised-gasp_male.webp",
+      "outPng": "/Users/riz/Work/TheaTechSolutions/fairpose/data/gallery-regen/out/mix-male/expression_ea2-surprised-gasp_male.png",
+      "seconds": 38,
+      "updatedAt": "2026-10-30T06:27:00.842Z",
+      "bytes": 853154,
+      "prompt": "v2-expr-lock"
+    },
+    "expression_ea2-uwu-scrunch_male": {
+      "status": "done",
+      "male": "/Users/riz/Work/TheaTechSolutions/fairpose/public/mix/img/expression_ea2-uwu-scrunch_male.webp",
+      "outPng": "/Users/riz/Work/TheaTechSolutions/fairpose/data/gallery-regen/out/mix-male/expression_ea2-uwu-scrunch_male.png",
+      "seconds": 38,
+      "updatedAt": "2026-10-30T06:27:38.536Z",
+      "bytes": 863990,
+      "prompt": "v2-expr-lock"
+    },
+    "expression_ea2-wink-tongue_male": {
+      "status": "done",
+      "male": "/Users/riz/Work/TheaTechSolutions/fairpose/public/mix/img/expression_ea2-wink-tongue_male.webp",
+      "outPng": "/Users/riz/Work/TheaTechSolutions/fairpose/data/gallery-regen/out/mix-male/expression_ea2-wink-tongue_male.png",
+      "seconds": 37,
+      "updatedAt": "2026-10-30T06:28:15.962Z",
+      "bytes": 876085,
+      "prompt": "v2-expr-lock"
+    }
+  }
+}

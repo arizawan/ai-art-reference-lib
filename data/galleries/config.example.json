@@ -1,0 +1,4 @@
+{
+  "assetBase": "https://assets.example.com",
+  "_note": "Pages build sets config.json from GALLERY_ASSET_BASE. Local: omit config.json or use empty assetBase."
+}

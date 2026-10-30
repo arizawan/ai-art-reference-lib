@@ -1,0 +1,14 @@
+{
+  "female": {
+    "id": "mika-vay",
+    "name": "Mika Vay",
+    "figure": "mika-vay-face.png",
+    "notes": "Canon face plate from Mika Vay bible (mika_v2_face_plate). Dusty muted pink hair, curtain bangs, Japanese woman ~24."
+  },
+  "male": {
+    "id": "ren-okada",
+    "name": "Ren Okada",
+    "figure": "ren-okada-face.png",
+    "notes": "Invented 2026-10-30 for Fairpose portrait regen. Japanese man ~26, short textured black hair, sharp jaw, calm identity plate. No existing lore — gallery figure only."
+  }
+}

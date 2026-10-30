@@ -1,0 +1,15 @@
+name = "ai-ref-lib-assets"
+main = "src/index.js"
+compatibility_date = "2026-10-01"
+account_id = "a0ff5e908c4e6b72658d5098e6d47b96"
+
+# Same hostname as Pages UI — Worker wins on these paths
+routes = [
+  { pattern = "ai-ref-lib.arizawan.com/portrait*", zone_name = "arizawan.com" },
+  { pattern = "ai-ref-lib.arizawan.com/pose*", zone_name = "arizawan.com" },
+  { pattern = "ai-ref-lib.arizawan.com/depth*", zone_name = "arizawan.com" },
+  { pattern = "ai-ref-lib.arizawan.com/costume*", zone_name = "arizawan.com" },
+]
+
+[vars]
+BUCKET = "ai-art-reference-lib"

@@ -1,6 +1,8 @@
-# Fairpose offline reference library
+# AI art reference lib — UI build output
 
-One UI for portrait, pose, depth, and costume cues. Credits live in the page footer only.
+Live: https://ai-ref-lib.arizawan.com · Source: https://github.com/arizawan/ai-art-reference-lib
+
+One UI for portrait, pose, depth, and costume cues. Top strip credits Gia + arizawan/GitHub. Click a card → **Download full size** for the original (`?download=1`).
 
 Repo handover: [`../../docs/HANDOVER.md`](../../docs/HANDOVER.md).
 

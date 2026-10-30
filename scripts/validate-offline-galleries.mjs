@@ -76,22 +76,21 @@ async function main() {
     fail('SC-1', 'data/galleries/index.html does not look like a unified multi-library app')
   }
 
-  // SC-2: footer keeps full license; header credits Gia via X (no GitHub as primary credit)
+  // SC-2: footer keeps license; header credits Gia via X (GitHub/arizawan OK as secondary host credit)
   const footHasCredits = /giaaibusi|Creator|license|CC0|open chat/i.test(unifiedHtml)
   const headerCreditsGia = /x\.com\/giaaibusi/i.test(unifiedHtml) && /Gia|ギア/i.test(unifiedHtml)
-  // React bundle may mention github in vendor noise — only fail if credit chrome points there as primary
-  const githubAsCredit = /href=["']https:\/\/github\.com\//i.test(unifiedHtml)
+  const hostCredit = /arizawan|github\.com\/arizawan/i.test(unifiedHtml)
   const heroSpam = /Join the open chat|btn-oc|chip-by/i.test(unifiedHtml)
-  if (footHasCredits && headerCreditsGia && !githubAsCredit && !heroSpam) {
-    pass('SC-2', 'Footer license + header credit to Gia on X')
+  if (footHasCredits && headerCreditsGia && hostCredit && !heroSpam) {
+    pass('SC-2', 'Footer license + Gia X credit + arizawan/GitHub host credit')
   } else {
     fail('SC-2', !footHasCredits
       ? 'Footer missing creator / license credits'
       : heroSpam
         ? 'Hero still has open-chat / chip-by spam controls'
-        : githubAsCredit
-          ? 'Header must not use GitHub as primary credit'
-          : 'Header missing credit link to Gia (@giaaibusi on X)')
+        : !headerCreditsGia
+          ? 'Header missing credit link to Gia (@giaaibusi on X)'
+          : 'Missing arizawan / GitHub host credit')
   }
 
   // SC-3 / SC-4 / SC-5 per library

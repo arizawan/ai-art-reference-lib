@@ -7,4 +7,5 @@ Read `docs/HANDOVER.md` first. Status snapshot: `docs/session-status.json`.
 - Large images are **gitignored**; live on Backblaze B2 (`b2:ai-art-reference-lib`). Keep local copies for validate/offline.
 - Comfy: default `http://100.96.51.107:8188`; always wait for idle queue.
 - Validate before claiming the mirror is intact: `npm run galleries:validate`.
-- Hosting (private for now): Cloudflare Pages UI + B2 assets under `arizawan.com` — see `docs/deploy-cloudflare-pages-b2.md`.
+- Hosting (public): https://ai-ref-lib.arizawan.com — Pages UI + B2 via Worker; see `docs/deploy-cloudflare-pages-b2.md`.
+- Full-size download: UI modal **Download full size** (`?download=1`) or MCP `get_asset_url` `kind=original`.

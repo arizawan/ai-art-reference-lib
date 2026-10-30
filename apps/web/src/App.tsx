@@ -284,62 +284,84 @@ export default function App() {
         : 'aspect-[3/4]'
 
   return (
-    <div className="mx-auto max-w-[1440px] px-[clamp(14px,3vw,36px)] pb-8 pt-6">
-      <header className="mb-4 flex flex-wrap items-start justify-between gap-3">
-        <div className="min-w-[min(100%,280px)] flex-1">
-          <p className="text-[11px] uppercase tracking-[0.16em] text-muted-foreground">Reference</p>
-          <h1 className="mt-1 text-[clamp(24px,3vw,34px)] font-bold tracking-tight">AI art reference lib</h1>
-          <p className="mt-1 max-w-xl text-sm text-muted-foreground">
-            Face, stance, depth, and outfit refs — search, filter, download. Light on memory; images load as you scroll.
-          </p>
-        </div>
-        <div className="flex flex-col items-end gap-2">
-          <p className="m-0 text-right text-xs text-muted-foreground leading-snug">
-            Open refs by{' '}
-            <a
-              className="font-semibold text-foreground underline decoration-border underline-offset-2 hover:text-accent"
-              href="https://x.com/giaaibusi"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Gia / ギア
-            </a>
-          </p>
-          <div className="flex flex-wrap items-center justify-end gap-2">
-            <Button
-              type="button"
-              size="sm"
-              variant="outline"
-              className="h-8 rounded-full px-3 text-xs font-semibold"
-              aria-haspopup="dialog"
-              onClick={() => {
-                setMcpOpen(true)
-                history.replaceState(null, '', '#mcp')
-              }}
-            >
-              MCP how-to
-            </Button>
-            <div className="inline-flex gap-0.5 rounded-full border border-border bg-card p-0.5" role="group" aria-label="Theme">
-              {(['auto', 'light', 'dark'] as ThemePref[]).map((t) => (
-                <Button
-                  key={t}
-                  type="button"
-                  size="sm"
-                  variant={theme === t ? 'default' : 'ghost'}
-                  className="h-8 rounded-full px-3 text-xs capitalize"
-                  data-theme-set={t}
-                  aria-pressed={theme === t}
-                  onClick={() => {
-                    setTheme(t)
-                    applyTheme(t)
-                  }}
-                >
-                  {t}
-                </Button>
-              ))}
-            </div>
+    <div className="mx-auto max-w-[1440px] px-[clamp(14px,3vw,36px)] pb-8 pt-3">
+      <div
+        className="mb-3 flex flex-wrap items-center justify-between gap-x-3 gap-y-1 border-b border-border pb-2 text-[11px] leading-tight text-foreground"
+        role="contentinfo"
+        aria-label="Credits"
+      >
+        <p className="m-0">
+          <span className="text-muted-foreground">Open refs by </span>
+          <a
+            className="font-semibold underline decoration-border underline-offset-2 hover:text-accent"
+            href="https://x.com/giaaibusi"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Gia / ギア
+          </a>
+          <span className="mx-1.5 text-muted-foreground">·</span>
+          <span className="text-muted-foreground">Hosted by </span>
+          <a
+            className="font-semibold underline decoration-border underline-offset-2 hover:text-accent"
+            href="https://arizawan.com"
+            target="_blank"
+            rel="noreferrer"
+          >
+            arizawan
+          </a>
+          <span className="mx-1.5 text-muted-foreground">·</span>
+          <a
+            className="font-semibold underline decoration-border underline-offset-2 hover:text-accent"
+            href="https://github.com/arizawan/ai-art-reference-lib"
+            target="_blank"
+            rel="noreferrer"
+          >
+            GitHub
+          </a>
+        </p>
+        <div className="flex flex-wrap items-center gap-2">
+          <Button
+            type="button"
+            size="sm"
+            variant="outline"
+            className="h-7 rounded-full px-2.5 text-[11px] font-semibold"
+            aria-haspopup="dialog"
+            onClick={() => {
+              setMcpOpen(true)
+              history.replaceState(null, '', '#mcp')
+            }}
+          >
+            MCP how-to
+          </Button>
+          <div className="inline-flex gap-0.5 rounded-full border border-border bg-card p-0.5" role="group" aria-label="Theme">
+            {(['auto', 'light', 'dark'] as ThemePref[]).map((t) => (
+              <Button
+                key={t}
+                type="button"
+                size="sm"
+                variant={theme === t ? 'default' : 'ghost'}
+                className="h-7 rounded-full px-2.5 text-[11px] capitalize"
+                data-theme-set={t}
+                aria-pressed={theme === t}
+                onClick={() => {
+                  setTheme(t)
+                  applyTheme(t)
+                }}
+              >
+                {t}
+              </Button>
+            ))}
           </div>
         </div>
+      </div>
+
+      <header className="mb-4">
+        <p className="text-[11px] uppercase tracking-[0.16em] text-muted-foreground">Reference</p>
+        <h1 className="mt-1 text-[clamp(24px,3vw,34px)] font-bold tracking-tight">AI art reference lib</h1>
+          <p className="mt-1 max-w-xl text-sm text-muted-foreground">
+          Face, stance, depth, and outfit refs. Click any card → <strong className="font-medium text-foreground">Download full size</strong> for the original file. Light on memory; images load as you scroll.
+        </p>
       </header>
 
       <div className="sticky top-0 z-20 -mx-[clamp(14px,3vw,36px)] border-b border-border bg-background/90 px-[clamp(14px,3vw,36px)] py-2.5 backdrop-blur-md">
@@ -625,6 +647,16 @@ export default function App() {
             <a href="https://x.com/giaaibusi" target="_blank" rel="noreferrer">Gia / ギア (@giaaibusi)</a>
             {' '}— Creator / license: open chat · CC0-style open refs. Credit requested.
           </li>
+          <li>
+            Hosted &amp; maintained by{' '}
+            <a href="https://arizawan.com" target="_blank" rel="noreferrer">arizawan</a>
+            {' '}(
+            <a href="https://github.com/arizawan" target="_blank" rel="noreferrer">@arizawan</a>
+            ) · source{' '}
+            <a href="https://github.com/arizawan/ai-art-reference-lib" target="_blank" rel="noreferrer">
+              github.com/arizawan/ai-art-reference-lib
+            </a>
+          </li>
           <li>Fairpose mirror for browsing and download. No warranty.</li>
           <li>
             Live host: <a href="https://ai-ref-lib.arizawan.com">ai-ref-lib.arizawan.com</a>
@@ -796,18 +828,35 @@ get_asset_url({ library: "portrait", id: "<cueId>", kind: "original", include_im
                   })}
                 </div>
               )}
-              {modalCue && (
-                <Button asChild className="w-full">
-                  <a
-                    id="mdl"
-                    className="dl"
-                    href={modalCue.fullUrl || modalCue.previewUrl || modalCue.thumbUrl}
-                    download={`${modalCue.id || 'ref'}.png`}
-                  >
-                    Download full size
-                  </a>
-                </Button>
-              )}
+              {modalCue && (() => {
+                const fullHref = modalCue.fullUrl || modalCue.previewUrl || modalCue.thumbUrl || '#'
+                const fileName = fullHref.split('?')[0].split('/').pop() || `${modalCue.id || 'ref'}.png`
+                const dlHref = fullHref === '#'
+                  ? '#'
+                  : `${fullHref}${fullHref.includes('?') ? '&' : '?'}download=1`
+                return (
+                  <div className="space-y-2">
+                    <Button asChild className="w-full">
+                      <a
+                        id="mdl"
+                        className="dl"
+                        href={dlHref}
+                        download={fileName}
+                        rel="noopener"
+                      >
+                        Download full size
+                      </a>
+                    </Button>
+                    <p className="m-0 text-center text-[11px] text-muted-foreground">
+                      Saves the original file ({fileName}). Or open{' '}
+                      <a className="underline hover:text-accent" href={fullHref} target="_blank" rel="noreferrer">
+                        full size in a new tab
+                      </a>
+                      .
+                    </p>
+                  </div>
+                )
+              })()}
             </div>
           </div>
         </DialogContent>

@@ -26,4 +26,11 @@ npx wrangler deploy
 # Cloudflare Access: protect ai-ref-lib.arizawan.com until public
 ```
 
+## Speed + analytics
+
+- Zone `arizawan.com`: Brotli, HTTP/2+3, Early Hints, 0-RTT, Polish **lossless** (enabled). Rocket Loader stays **off** (breaks React).
+- Pages `_headers`: hashed `/assets/*` → `max-age=31536000, immutable`; `index.html` no long cache.
+- Asset Worker: Cloudflare Cache API + long `Cache-Control` on images; short TTL + SWR on `cues.json`.
+- Web Analytics: zone auto-install + explicit beacon token on `ai-ref-lib` HTML (same as arizawan.com RUM site).
+
 B2 sync: `B2_RCLONE_REMOTE=b2:ai-art-reference-lib npm run galleries:sync:b2`

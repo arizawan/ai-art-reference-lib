@@ -4,6 +4,8 @@ node_modules/
 !logs/*.log
 .specs/scratchpad/
 data/galleries/config.json
+.wrangler/
+cloudflare/**/.wrangler/
 
 # Large gallery binaries stay on B2 — keep cues/meta in git
 data/portrait-gallery/img/

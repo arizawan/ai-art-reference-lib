@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "ai-art-reference-lib": {
+      "command": "node",
+      "args": ["scripts/mcp-galleries.mjs"],
+      "cwd": "${workspaceFolder}",
+      "env": {
+        "GALLERY_PUBLIC_BASE_URL": "https://ai-ref-lib.arizawan.com"
+      }
+    }
+  }
+}

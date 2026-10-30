@@ -55,5 +55,12 @@
     "public/mix/img (full Mix library; expression males may have been written then moved)",
     "public/styles/expression_* (some expression plates)",
     "uncommitted deletion of gallery trees on chore/fairpose-com-cutover-prep (~12989 paths)"
-  ]
+  ],
+  "hosting": {
+    "pages": "https://ai-art-reference-lib.pages.dev",
+    "customDomain": "https://ai-ref-lib.arizawan.com",
+    "ui": "apps/web Vite+React+shadcn → data/galleries",
+    "mcp": "npm run galleries:mcp (.mcp.json)",
+    "validate": "SC-1–7 pass after React build (2026-10-30)"
+  }
 }

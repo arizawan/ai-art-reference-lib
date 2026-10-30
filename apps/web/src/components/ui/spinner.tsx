@@ -4,8 +4,8 @@ import { cn } from '@/lib/utils'
 export function Spinner({ className, label = 'Loading' }: { className?: string; label?: string }) {
   return (
     <div className={cn('inline-flex items-center gap-2 text-muted-foreground', className)} role="status">
-      <Loader2 className="h-4 w-4 animate-spin" aria-hidden />
-      <span className="text-sm">{label}</span>
+      <Loader2 className="h-4 w-4 shrink-0 animate-spin" aria-hidden />
+      {label ? <span className="text-sm">{label}</span> : <span className="sr-only">Loading</span>}
     </div>
   )
 }

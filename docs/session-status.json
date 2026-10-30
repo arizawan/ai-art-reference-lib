@@ -57,10 +57,17 @@
     "uncommitted deletion of gallery trees on chore/fairpose-com-cutover-prep (~12989 paths)"
   ],
   "hosting": {
+    "github": "https://github.com/arizawan/ai-art-reference-lib",
     "pages": "https://ai-art-reference-lib.pages.dev",
     "customDomain": "https://ai-ref-lib.arizawan.com",
+    "b2": "b2:ai-art-reference-lib",
+    "worker": "ai-ref-lib-assets",
     "ui": "apps/web Vite+React+shadcn → data/galleries",
-    "mcp": "npm run galleries:mcp (.mcp.json)",
-    "validate": "SC-1–7 pass after React build (2026-10-30)"
+    "ux": "tab cache+prefetch; spinners on tab/badge/skeleton grid/lazy tiles/modal; Download full size ?download=1",
+    "mcp": "npm run galleries:mcp (.mcp.json server ai-art-reference-lib)",
+    "validate": "SC-1–7 pass after React build (2026-10-30)",
+    "lastUiBundle": "index-BTtl4y86.js",
+    "deployNote": "wrangler pages deploy data/galleries --project-name=ai-art-reference-lib --branch main"
   }
 }
+

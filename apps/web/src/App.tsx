@@ -4,6 +4,7 @@ import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
 import { Dialog, DialogContent, DialogTitle } from '@/components/ui/dialog'
 import { Input } from '@/components/ui/input'
+import { Skeleton } from '@/components/ui/skeleton'
 import { Spinner } from '@/components/ui/spinner'
 import { LazyImage } from '@/components/lazy-image'
 import {
@@ -98,6 +99,7 @@ export default function App() {
   const [hoverAngle, setHoverAngle] = useState<Record<string, string>>({})
   const [mcpOpen, setMcpOpen] = useState(false)
   const sentinelRef = useRef<HTMLDivElement>(null)
+  const loadGen = useRef(0)
   const activeLib = lib
 
   useEffect(() => {
@@ -137,6 +139,14 @@ export default function App() {
         setCache({ [start]: packed })
         setLib(start)
         setLoading(false)
+        // Warm other libraries so tab switches feel instant
+        for (const id of Object.keys(LIBS) as LibId[]) {
+          if (id === start) continue
+          void loadLib(id).then((p) => {
+            if (cancelled) return
+            setCache((prev) => (prev[id] ? prev : { ...prev, [id]: p }))
+          })
+        }
       } catch (err) {
         if (!cancelled) {
           setError(err instanceof Error ? err.message : String(err))
@@ -150,24 +160,34 @@ export default function App() {
   }, [])
 
   const switchLib = useCallback(async (name: LibId) => {
-    setLoading(true)
+    const gen = ++loadGen.current
+    setLib(name)
+    setN(PAGE)
+    setHoverAngle({})
     setError(null)
+    setStyleOpen(false)
+    const u = new URL(location.href)
+    u.searchParams.set('lib', name)
+    history.replaceState(null, '', u)
+    scrollTo({ top: 0, behavior: 'instant' in window ? 'instant' : 'auto' } as ScrollToOptions)
+
+    if (cache[name]) {
+      setLoading(false)
+      return
+    }
+
+    setLoading(true)
     try {
       const packed = await loadLib(name)
+      if (gen !== loadGen.current) return
       setCache((prev) => ({ ...prev, [name]: packed }))
-      setLib(name)
-      setN(PAGE)
-      setHoverAngle({})
-      const u = new URL(location.href)
-      u.searchParams.set('lib', name)
-      history.replaceState(null, '', u)
-      scrollTo(0, 0)
     } catch (err) {
+      if (gen !== loadGen.current) return
       setError(err instanceof Error ? err.message : String(err))
     } finally {
-      setLoading(false)
+      if (gen === loadGen.current) setLoading(false)
     }
-  }, [])
+  }, [cache])
 
   const viewRows: ViewRow[] = useMemo(() => {
     const packed = cache[lib]
@@ -374,18 +394,20 @@ export default function App() {
               data-lib={id}
               data-library={id}
               aria-selected={activeLib === id}
+              aria-busy={loading && activeLib === id}
               variant={activeLib === id ? 'default' : 'secondary'}
               className="shrink-0 rounded-full"
               onClick={() => void switchLib(id)}
             >
               {LIBS[id].label}
-              {cache[id]?.cues && (
+              {loading && activeLib === id ? (
+                <Spinner label="" className="gap-0" />
+              ) : cache[id]?.cues ? (
                 <em className="not-italic text-[11px] opacity-65">{fmt(cache[id]!.cues.length)}</em>
-              )}
+              ) : null}
             </Button>
           ))}
         </div>
-
         <div className="mt-2.5 flex flex-wrap items-center gap-2">
           <div className="relative min-w-[220px] flex-1">
             <Search className="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 opacity-45" />
@@ -400,10 +422,15 @@ export default function App() {
                 setN(PAGE)
               }}
               aria-label="Search"
+              disabled={loading}
             />
           </div>
           <Badge variant="secondary" id="count" className="ml-auto font-normal tabular-nums">
-            {countLabel}
+            {loading ? (
+              <Spinner label={`Loading ${LIBS[lib].label}…`} className="gap-1.5 [&_span]:text-xs" />
+            ) : (
+              countLabel
+            )}
           </Badge>
         </div>
 
@@ -509,12 +536,6 @@ export default function App() {
         </div>
       </div>
 
-      {loading && !cache[lib] && (
-        <div className="flex justify-center py-16">
-          <Spinner label="Loading library…" />
-        </div>
-      )}
-
       {error && (
         <div className="py-16 text-center text-muted-foreground">
           <b className="block text-foreground">Failed to load libraries</b>
@@ -522,12 +543,38 @@ export default function App() {
         </div>
       )}
 
-      {!error && (
+      {!error && loading && (
+        <div
+          id="grid"
+          className="grid grid-cols-2 gap-3 py-3.5 sm:grid-cols-3 lg:grid-cols-4"
+          role="status"
+          aria-busy="true"
+          aria-label={`Loading ${LIBS[lib].label}`}
+        >
+          {Array.from({ length: 12 }, (_, i) => (
+            <article key={`sk-${i}`} className="overflow-hidden rounded-lg border border-border bg-card">
+              <div className={cn('relative w-full bg-muted', aspect)}>
+                <Skeleton className="absolute inset-0 rounded-none" />
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <Spinner label="" />
+                </div>
+              </div>
+              <div className="space-y-2 px-2.5 py-2">
+                <Skeleton className="h-2.5 w-1/3" />
+                <Skeleton className="h-3 w-3/4" />
+                <Skeleton className="h-2.5 w-1/2" />
+              </div>
+            </article>
+          ))}
+        </div>
+      )}
+
+      {!error && !loading && (
         <div
           id="grid"
           className="grid grid-cols-2 gap-3 py-3.5 sm:grid-cols-3 lg:grid-cols-4"
         >
-          {shown.length === 0 && !loading && (
+          {shown.length === 0 && (
             <div className="col-span-full py-12 text-center text-muted-foreground">
               <b className="block text-foreground">No matches</b>
               <div>Change filters or search.</div>

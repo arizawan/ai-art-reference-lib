@@ -1,12 +1,15 @@
-# Handover — Fairpose offline galleries
+# Handover — ai-art-reference-lib
 
 Split from the Fairpose app repo on **2026-10-30** so large Gia mirrors + Comfy regen work live in their own project.
+
+Public product name / GitHub / MCP: **`ai-art-reference-lib`**.  
+Live: https://ai-ref-lib.arizawan.com · Repo: https://github.com/arizawan/ai-art-reference-lib
 
 Machine-readable snapshot: [`session-status.json`](./session-status.json).
 
 ## What this repo is
 
-Offline **reference libraries** (browse / filter / download) plus a **homelab ComfyUI regen** pipeline that redraws cues as wood / fashion / identity plates without overwriting Gia sources.
+**Reference libraries** (browse / filter / download) with a public Cloudflare-hosted UI, plus a **homelab ComfyUI regen** pipeline that redraws cues as wood / fashion / identity plates without overwriting Gia sources.
 
 | Library | Path | Count | Upstream |
 |---------|------|------:|----------|
@@ -14,10 +17,23 @@ Offline **reference libraries** (browse / filter / download) plus a **homelab Co
 | Pose | `data/pose-gallery/` | 1439 | https://ai-pose-gallery.pages.dev/ |
 | Costume | `data/costume-gallery/` | 1407 | https://ai-costume-gallery.pages.dev/ |
 | Depth (POSE-DB-02) | `data/pose-depth-gallery/` | 1439 | https://ai-pose-depth-gallery.pages.dev/ |
-| Unified UI | `data/galleries/` | — | local |
+| Unified UI | `data/galleries/` (from `apps/web`) | — | https://ai-ref-lib.arizawan.com |
 | Regen outs | `data/gallery-regen/` | — | Comfy |
 
-Depth cue IDs match pose (ID parity).
+Depth cue IDs match pose (ID parity). Gallery **blobs** are gitignored; B2 remote `b2:ai-art-reference-lib`.
+
+## Public hosting
+
+| Piece | Detail |
+|-------|--------|
+| Pages | project `ai-art-reference-lib` → `ai-ref-lib.arizawan.com` |
+| Assets | Worker `ai-ref-lib-assets` → B2; `?download=1` → attachment |
+| UI | Vite/React/shadcn; tab cache + prefetch; spinners on tab/badge/skeleton grid/lazy tiles/modal |
+| MCP | `npm run galleries:mcp` · Cursor server `ai-art-reference-lib` |
+| Validate | `npm run galleries:validate` (SC-1…SC-7) before claiming mirror OK |
+| Deploy UI | `galleries:build` then `wrangler pages deploy data/galleries … --branch main` |
+
+Full deploy notes: [`deploy-cloudflare-pages-b2.md`](./deploy-cloudflare-pages-b2.md).
 
 ## Quick start
 
@@ -93,6 +109,7 @@ Rough: pose quick ~36s/img → ~14.5 h one gender; F+M wood + costume fashion ~7
 |--------|------|
 | `scripts/serve-offline-galleries.mjs` | Static server :5188 |
 | `scripts/validate-offline-galleries.mjs` | SC-1…SC-7 + file presence |
+| `scripts/mcp-galleries.mjs` | stdio MCP (`search_cues`, `get_asset_url`) |
 | `scripts/scrape-pose-depth-gallery.mjs` | Re-mirror Gia depth |
 | `scripts/regen-gallery-comfy.mjs` | Pose/costume/portrait Comfy regen |
 | `scripts/regen-mix-missing-male.mjs` | Mix male expression fill |
@@ -107,4 +124,6 @@ Rough: pose quick ~36s/img → ~14.5 h one gender; F+M wood + costume fashion ~7
 2. Wood full-catalog regen **paused** as low value; depth gallery is the pose-ID reference pull instead.
 3. Mix expression soft → v2 order + expression-lock prompt; do not revert to cue-as-image1 for males.
 4. Encode webp with **cwebp** (not ffmpeg webp) for mix.
-5. License copy in footer; header credits Gia on X (`success-criteria.json` SC-2).
+5. License copy in footer; header credits Gia on X + arizawan/GitHub host (`success-criteria.json` SC-2).
+6. Do not overwrite `data/*-gallery/`; regen only under `data/gallery-regen/out/`.
+7. Production Pages deploys use `--branch main` (preview branches are not the custom domain).

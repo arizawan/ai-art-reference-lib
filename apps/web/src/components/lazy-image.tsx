@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
 import { cn } from '@/lib/utils'
 import { Skeleton } from '@/components/ui/skeleton'
+import { Spinner } from '@/components/ui/spinner'
 
 export function LazyImage({
   src,
@@ -13,7 +14,7 @@ export function LazyImage({
   className?: string
   eager?: boolean
 }) {
-  const ref = useRef<HTMLImageElement>(null)
+  const ref = useRef<HTMLDivElement>(null)
   const [shown, setShown] = useState(eager)
   const [loaded, setLoaded] = useState(false)
   const [error, setError] = useState(false)
@@ -45,7 +46,16 @@ export function LazyImage({
 
   return (
     <div ref={ref} className={cn('relative overflow-hidden bg-muted', className)}>
-      {!loaded && !error && <Skeleton className="absolute inset-0 rounded-none" />}
+      {!loaded && !error && (
+        <>
+          <Skeleton className="absolute inset-0 rounded-none" />
+          {shown && (
+            <div className="absolute inset-0 z-[1] flex items-center justify-center bg-muted/40">
+              <Spinner label="" className="text-muted-foreground" />
+            </div>
+          )}
+        </>
+      )}
       {shown && (
         <img
           src={src}
@@ -56,13 +66,13 @@ export function LazyImage({
           onLoad={() => setLoaded(true)}
           onError={() => setError(true)}
           className={cn(
-            'h-full w-full object-cover transition-opacity duration-200',
+            'relative z-[2] h-full w-full object-cover transition-opacity duration-200',
             loaded ? 'opacity-100' : 'opacity-0',
           )}
         />
       )}
       {error && (
-        <div className="absolute inset-0 flex items-center justify-center text-xs text-muted-foreground">
+        <div className="absolute inset-0 z-[2] flex items-center justify-center text-xs text-muted-foreground">
           Failed
         </div>
       )}

@@ -12,9 +12,10 @@
 ## Commands
 
 ```bash
-# UI
-GALLERY_ASSET_BASE= npm run galleries:pages:prepare
-npx wrangler pages deploy data/galleries --project-name=ai-art-reference-lib --commit-dirty=true
+# UI (production custom domain tracks the main branch)
+npm run galleries:build
+# or: GALLERY_ASSET_BASE= npm run galleries:pages:prepare
+npx wrangler pages deploy data/galleries --project-name=ai-art-reference-lib --branch main --commit-dirty=true
 
 # Asset proxy (secrets once)
 cd cloudflare/ai-ref-lib-assets

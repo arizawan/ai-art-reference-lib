@@ -54,7 +54,11 @@ function assetPath(mount: string, rel?: string) {
   return `${libRoot(mount)}/${rel.replace(/^\//, '')}`
 }
 
+const libCache = new Map<LibId, { meta: Record<string, unknown>; cues: Cue[] }>()
+
 export async function loadLib(name: LibId) {
+  const hit = libCache.get(name)
+  if (hit) return hit
   const mount = LIBS[name].mount
   const res = await fetch(`${libRoot(mount)}/cues.json`)
   if (!res.ok) throw new Error(`Failed to load ${name}`)
@@ -69,7 +73,9 @@ export async function loadLib(name: LibId) {
       fullUrl: assetPath(mount, sp.original),
     }
   })
-  return { meta: json, cues }
+  const packed = { meta: json as Record<string, unknown>, cues }
+  libCache.set(name, packed)
+  return packed
 }
 
 export function textHit(c: Cue, q: string) {
